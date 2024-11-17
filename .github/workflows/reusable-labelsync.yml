@@ -1,0 +1,48 @@
+# https://github.com/sapphiredev/.github/blob/ab041c18f0ba33434068e1417bf457576eaf44c4/.github/workflows/reusable-labelsync.yml
+name: label-sync
+
+on:
+  workflow_call:
+    inputs:
+      merge-labels:
+        description: Whether to merge labels or not
+        required: false
+        default: false
+        type: boolean
+      repository-overwrite-labels:
+        description: The repository to get overwrite labels from. Only used if merge-labels is true!
+        required: false
+        type: string
+
+jobs:
+  label-sync:
+    name:  Automatic Label Synchronization
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Core labels
+        uses: actions/checkout@v4
+        with:
+          path: core-labels
+          sparse-checkout: .github/labels.yml
+          sparse-checkout-cone-mode: false
+          repository: yuanstuffs/.github
+      - name: Checkout Overwrite Labels
+        if: inputs.merge-labels == true
+        uses: actions/checkout@v4
+        with:
+          path: overwrite-labels
+          sparse-checkout: .github/labels.yml
+          sparse-checkout-cone-mode: false
+          repository: ${{ inputs.repository-overwrite-labels }}
+      - name: Merge labels
+        if: inputs.merge-labels == true
+        run: |
+          yq '. *+ load("core-labels/.github/labels.yml")' overwrite-labels/.github/labels.yml > labels.yml
+      - name: Move core labels
+        if: inputs.merge-labels == false
+        run: mv core-labels/.github/labels.yml labels.yml
+      - name: Run Label Sync
+        uses: crazy-max/ghaction-github-labeler@v5
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          yaml-file: labels.yml
