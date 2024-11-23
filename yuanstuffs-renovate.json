@@ -50,11 +50,6 @@
 				"allowedVersions": "^7"
 			},
 			{
-				"matchPackageNames": ["tsup"],
-				"description": "pin tsup version to exactly 8.3.0",
-				"allowedVersions": "8.3.0"
-			},
-			{
 				"matchPackagePatterns": ["@types/node"],
 				"description": "pin @types/node to v20",
 				"allowedVersions": "^20",
