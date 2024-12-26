@@ -2,6 +2,7 @@
   color: 'a0bdd6'
 - name: blocked
   color: '822d31'
+  description: PR is blocked by something
 - name: bug
   color: 'd73a4a'
 - name: chore
