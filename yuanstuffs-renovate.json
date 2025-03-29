@@ -60,5 +60,10 @@
 	},
 	"dockerfile": {
 		"semanticCommitType": "build"
-	}
+	},
+    "vulnerabilityAlerts": {
+        "enabled": true,
+        "automerge": true,
+		"assignees": ["yuansheng1549"]
+    }
 }
