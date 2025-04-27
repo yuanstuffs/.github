@@ -24,7 +24,7 @@ jobs:
                 private-key: ${{ secrets.APP_PRIVATE_KEY }}
                 permission-contents: write
 
-          - name: Checkout Core labels
+          - name: Checkout
             uses: actions/checkout@v4
             with:
               fetch-depth: 0
