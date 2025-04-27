@@ -33,11 +33,16 @@ jobs:
           - name: Copy renovate config to root
             run: |
               cp .github/renovate.json yuanstuffs-renovate.json
+
+          - name: Setup Git
+            run: |
+              git config --local user.email "yuan-utilities[bot]@users.noreply.github.com"
+              git config --local user.name "yuan-utilities[bot]"
           
           - name: Commit files
             run: |
               git add yuanstuffs-renovate.json
-              git config --local user.email "yuan-utilities[bot]@users.noreply.github.com"
-              git config --local user.name "yuan-utilities[bot]"
-              git commit -nsm "chore(renovate): sync config" -m "Original Commit: ${GITHUB_SHA}" || true
-              git push -u origin main
+              if ! git diff-index --quiet HEAD --; then
+                git commit -nsm "chore(renovate): sync config" -m "Original Commit: ${GITHUB_SHA}"
+                git push --set-upstream origin $(git rev-parse --abbrev-ref HEAD)
+              fi
