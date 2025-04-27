@@ -50,7 +50,7 @@
 				"allowedVersions": "^7"
 			},
 			{
-				"matchPackagePatterns": ["@types/node"],
+				"matchPackageNames": ["@types/node"],
 				"description": "pin @types/node to v20",
 				"allowedVersions": "^20",
 				"automerge": true,
@@ -58,12 +58,12 @@
 			}
 		]
 	},
-	"dockerfile": {
-		"semanticCommitType": "build"
-	},
+    "dockerfile": {
+        "semanticCommitType": "build"
+    },
     "vulnerabilityAlerts": {
         "enabled": true,
         "automerge": true,
-		"assignees": ["yuansheng1549"]
+	"assignees": ["yuansheng1549"]
     }
 }
