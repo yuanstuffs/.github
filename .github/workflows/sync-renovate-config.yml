@@ -38,5 +38,5 @@ jobs:
             run: |
               git config --local user.email "yuan-utilities[bot]@users.noreply.github.com"
               git config --local user.name "yuan-utilities[bot]"
-              git commit -nasm "chore(renovate): sync config" -m "Original Commit: ${GITHUB_SHA}" -m "Link: https://github.com/${{ github.repository }}/commit/${{ github.sha }}" || true
+              git commit -nasm "chore(renovate): sync config" -m "Original Commit: ${GITHUB_SHA}" || true
               git push -u origin main
