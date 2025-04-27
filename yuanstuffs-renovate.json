@@ -64,6 +64,6 @@
     "vulnerabilityAlerts": {
         "enabled": true,
         "automerge": true,
-		"assignees": ["yuansheng1549"]
+        "assignees": ["yuansheng1549"]
     }
 }
