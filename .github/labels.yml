@@ -1,5 +1,11 @@
 - name: approved
   color: 'a0bdd6'
+- name: approved:yuansheng1549
+  color: 'a0bdd6'
+- name: approved:yuansheng231
+  color: 'a0bdd6'
+- name: approved:MahiruShiina
+  color: 'a0bdd6'
 - name: blocked
   color: '822d31'
   description: PR is blocked by something
