@@ -20,7 +20,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Core labels
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           path: core-labels
           sparse-checkout: .github/labels.yml
@@ -28,7 +28,7 @@ jobs:
           repository: yuanstuffs/.github
       - name: Checkout Overwrite Labels
         if: inputs.merge-labels == true
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           path: overwrite-labels
           sparse-checkout: .github/labels.yml
