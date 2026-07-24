@@ -76,7 +76,7 @@ jobs:
                 approved:yuansheng1549
 
           - name: Enable Pull Request Automerge
-            if: steps.cpr.outputs.pull-request-operation != 'none'
+            if: steps.cpr.outputs.pull-pull-request-url
             run: gh pr merge --squash --auto "${{ steps.cpr.outputs.pull-request-url }}"
             env:
               GH_TOKEN: ${{ steps.app-token.outputs.token }}
