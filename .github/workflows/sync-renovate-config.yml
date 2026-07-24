@@ -23,6 +23,7 @@ jobs:
                 client-id: ${{ vars.APP_ID }}
                 private-key: ${{ secrets.APP_PRIVATE_KEY }}
                 permission-contents: write
+                permission-pull-requests: write
 
           - name: Checkout
             uses: actions/checkout@v7
@@ -49,10 +50,26 @@ jobs:
             env:
               GH_TOKEN: ${{ steps.app-token.outputs.token }}
           
-          - name: Commit files
-            run: |
-              git add yuanstuffs-renovate.json
-              if ! git diff-index --quiet HEAD --; then
-                git commit -nsm "chore(renovate): sync config" -m "Original Commit: ${GITHUB_SHA}"
-                git push --set-upstream origin $(git rev-parse --abbrev-ref HEAD)
-              fi
+          # - name: Commit files
+          #   run: |
+          #     git add yuanstuffs-renovate.json
+          #     if ! git diff-index --quiet HEAD --; then
+          #       git commit -nsm "chore(renovate): sync config" -m "Original Commit: ${GITHUB_SHA}"
+          #       git push --set-upstream origin $(git rev-parse --abbrev-ref HEAD)
+          #     fi
+
+          - name: Commit & Create Pull Request
+            uses: peter-evans/create-pull-request@v6
+            if: 
+            with:
+              token: ${{ steps.app-token.outputs.token }}
+              commit-message: "chore(renovate): sync config"
+              title: "chore(renovate): sync config"
+              body: "Original Commit: ${GITHUB_SHA}"
+              branch: "sync-renovate-config"
+              delete-branch: true
+              auto-merge-method: squash
+              add-paths: |
+                yuanstuffs-renovate.json
+              labels: |
+                approved:yuansheng1549
