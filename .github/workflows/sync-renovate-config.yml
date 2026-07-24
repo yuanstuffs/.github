@@ -44,10 +44,10 @@ jobs:
 
           - name: Setup Git
             run: |
-              # git config --local user.email "yuan-utilities[bot]@users.noreply.github.com"
-              # git config --local user.name "yuan-utilities[bot]"
-              git config --local user.name '${{ steps.app-token.outputs.app-slug }}[bot]'
-              git config --local user.email '${{ steps.get-user-id.outputs.user-id }}+${{ steps.app-token.outputs.app-slug }}[bot]@users.noreply.github.com'
+              git config --local user.email "yuan-utilities[bot]@users.noreply.github.com"
+              git config --local user.name "yuan-utilities[bot]"
+              # git config --local user.name '${{ steps.app-token.outputs.app-slug }}[bot]'
+              # git config --local user.email '${{ steps.get-user-id.outputs.user-id }}+${{ steps.app-token.outputs.app-slug }}[bot]@users.noreply.github.com'
             env:
               GH_TOKEN: ${{ steps.app-token.outputs.token }}
           
@@ -66,7 +66,7 @@ jobs:
               token: ${{ steps.app-token.outputs.token }}
               commit-message: "chore(renovate): sync config"
               title: "chore(renovate): sync config"
-              body: "Original Commit: ${GITHUB_SHA}"
+              body: "Original Commit: ${{ github.sha }}"
               branch: "sync-renovate-config"
               delete-branch: true
               add-paths: |
