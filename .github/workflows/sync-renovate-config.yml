@@ -69,11 +69,14 @@ jobs:
               body: "Original Commit: ${{ github.sha }}"
               branch: "sync-renovate-config"
               delete-branch: true
+              signoff:  true
               add-paths: |
                 yuanstuffs-renovate.json
               labels: |
                 approved:yuansheng1549
+
           - name: Enable Pull Request Automerge
+            if: steps.cpr.outputs.pull-request-operation != 'none'
             run: gh pr merge --squash --auto "${{ steps.cpr.outputs.pull-request-url }}"
             env:
               GH_TOKEN: ${{ steps.app-token.outputs.token }}
