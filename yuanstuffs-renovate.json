@@ -52,8 +52,8 @@
 			},
 			{
 				"matchPackageNames": ["@types/node"],
-				"description": "pin @types/node to v20",
-				"allowedVersions": "^20",
+				"description": "pin @types/node to v24",
+				"allowedVersions": "^24",
 				"automerge": true,
 				"platformAutomerge": true
 			}
