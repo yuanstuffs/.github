@@ -38,8 +38,8 @@
 			},
 			{
 				"matchPackageNames": ["typescript"],
-				"description": "only allow renovate bump typescript version to 5.4",
-				"allowedVersions": "<=5.4"
+				"description": "only allow renovate bump typescript version to 5.9",
+				"allowedVersions": "<=5.9"
 			},
 			{
 				"matchPackageNames": ["eslint"],
