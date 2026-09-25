@@ -60,6 +60,33 @@
 			}
 		]
 	},
+	"bun": {
+		"rangeStrategy": "bump",
+		"packageRules": [
+			{
+				"matchUpdateTypes": ["patch"],
+				"matchCurrentVersion": "/^0\\./",
+				"automerge": true,
+				"platformAutomerge": true
+			},
+			{
+				"matchUpdateTypes": ["minor", "patch"],
+				"matchCurrentVersion": ">=1.0.0",
+				"automerge": true,
+				"platformAutomerge": true
+			},
+			{
+				"matchPackageNames": ["typescript"],
+				"description": "only allow renovate bump typescript version to 5.4",
+				"allowedVersions": "<=5.4"
+			},
+			{
+				"matchPackageNames": ["eslint"],
+				"description": "pin eslint to v9",
+				"allowedVersions": "^9"
+			}
+		]
+	},
     "dockerfile": {
         "semanticCommitType": "build"
     },
