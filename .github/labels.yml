@@ -25,6 +25,9 @@
   color: '008672'
 - name: invalid
   color: 'e4e669'
+- name: mergepls
+  color: 'b598a9'
+  description: Merge the pull request once all checks has passed
 - name: refactor
   color: '74e1c6'
 - name: question
