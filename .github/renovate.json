@@ -17,7 +17,7 @@
 	"npm": {
 		"postUpdateOptions": ["yarnDedupeHighest"],
 		"rangeStrategy": "bump",
-		"minimumReleaseAge": "2 days",
+		"minimumReleaseAge": "1 day",
 		"packageRules": [
 			{
 				"matchUpdateTypes": ["patch"],
