@@ -14,13 +14,15 @@
 	"labels": ["dependencies"],
 	"reviewers": ["yuansheng1549"],
 	"automergeStrategy": "squash",
-	"packageRules": [
-		{
-			"matchPackageNames": ["node"],
-			"matchDepTypes": ["uses-with"],
-			"allowedVersions": "^24"
-		}
-	],
+	"github-actions": {
+		"packageRules": [
+			{
+				"matchPackageNames": ["node"],
+				"description": "pin node@24",
+				"allowedVersions": "^24"
+			}
+		]
+	},
 	"npm": {
 		"postUpdateOptions": ["yarnDedupeHighest"],
 		"rangeStrategy": "bump",
