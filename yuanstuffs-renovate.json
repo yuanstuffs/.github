@@ -14,15 +14,15 @@
 	"labels": ["dependencies"],
 	"reviewers": ["yuansheng1549"],
 	"automergeStrategy": "squash",
-	"github-actions": {
-		"packageRules": [
-			{
-				"matchPackageNames": ["node"],
-				"description": "pin node@24",
-				"allowedVersions": "^24"
-			}
-		]
-	},
+	"packageRules": [
+		{
+			"matchManagers": ["github-actions"],
+			"matchDatasources": ["node-version"],
+			"matchPackageNames": ["node"],
+			"description": "pin node@24",
+			"allowedVersions": "^24"
+		}
+	],
 	"npm": {
 		"postUpdateOptions": ["yarnDedupeHighest"],
 		"rangeStrategy": "bump",
