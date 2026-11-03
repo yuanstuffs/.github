@@ -17,7 +17,7 @@
 	"packageRules": [
 		{
 			"matchManagers": ["github-actions"],
-			"matchPackageNames": ["node"],
+			"matchPackageNames": ["actions/node-versions"],
 			"description": "pin node@24",
 			"allowedVersions": "^24"
 		}
