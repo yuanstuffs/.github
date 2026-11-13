@@ -56,8 +56,8 @@
 			},
 			{
 				"matchSourceUrls": ["https://github.com/typescript-eslint/typescript-eslint"],
-				"description": "pin @typescript-eslint/* to v7",
-				"allowedVersions": "^7"
+				"description": "pin @typescript-eslint/* to v8",
+				"allowedVersions": "^8"
 			},
 			{
 				"matchPackageNames": ["@types/node"],
