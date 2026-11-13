@@ -56,6 +56,11 @@
 				"allowedVersions": "<=5.9"
 			},
 			{
+				"matchPackageNames": ["eslint"],
+				"description": "pin eslint to v9",
+				"allowedVersions": "^9"
+			},
+			{
 				"matchSourceUrls": ["https://github.com/typescript-eslint/typescript-eslint"],
 				"description": "pin @typescript-eslint/* to v7",
 				"allowedVersions": "^7"
