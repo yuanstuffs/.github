@@ -17,6 +17,7 @@
 	"packageRules": [
 		{
 			"matchManagers": ["github-actions"],
+			"matchDepTypes": ["volta"],
 			"matchPackageNames": ["actions/node-versions"],
 			"description": "pin node@24",
 			"allowedVersions": "^24"
@@ -48,11 +49,6 @@
 				"matchPackageNames": ["typescript"],
 				"description": "only allow renovate bump typescript version to 5.9",
 				"allowedVersions": "<=5.9"
-			},
-			{
-				"matchPackageNames": ["eslint"],
-				"description": "pin eslint to v8",
-				"allowedVersions": "^8"
 			},
 			{
 				"matchSourceUrls": ["https://github.com/typescript-eslint/typescript-eslint"],
