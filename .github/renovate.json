@@ -17,9 +17,14 @@
 	"packageRules": [
 		{
 			"matchManagers": ["github-actions"],
-			"matchDepTypes": ["volta"],
 			"matchPackageNames": ["actions/node-versions"],
 			"description": "pin node@24",
+			"allowedVersions": "^24"
+		},
+		{
+			"matchManagers": "npm",
+			"matchDepNames": ["node"],
+			"matchDepTypes": ["volta"],
 			"allowedVersions": "^24"
 		}
 	],
