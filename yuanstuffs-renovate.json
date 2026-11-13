@@ -20,12 +20,6 @@
 			"matchPackageNames": ["actions/node-versions"],
 			"description": "pin node@24",
 			"allowedVersions": "^24"
-		},
-		{
-			"matchManagers": "npm",
-			"matchDepNames": ["node"],
-			"matchDepTypes": ["volta"],
-			"allowedVersions": "^24"
 		}
 	],
 	"npm": {
@@ -62,8 +56,8 @@
 			},
 			{
 				"matchSourceUrls": ["https://github.com/typescript-eslint/typescript-eslint"],
-				"description": "pin @typescript-eslint/* to v7",
-				"allowedVersions": "^7"
+				"description": "pin @typescript-eslint/* to v8",
+				"allowedVersions": "^8"
 			},
 			{
 				"matchPackageNames": ["@types/node"],
@@ -71,6 +65,12 @@
 				"allowedVersions": "^24",
 				"automerge": true,
 				"platformAutomerge": true
+			},
+			{
+				"matchDepNames": ["node"],
+				"matchDepTypes": ["volta"],
+				"description": "pin volta node version to node@24",
+				"allowedVersions": "^24"
 			}
 		]
 	},
