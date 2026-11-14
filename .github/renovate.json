@@ -52,7 +52,7 @@
 			{
 				"matchPackageNames": ["eslint"],
 				"description": "pin eslint to v9",
-				"allowedVersions": "^9"
+				"allowedVersions": "^10"
 			},
 			{
 				"matchSourceUrls": ["https://github.com/typescript-eslint/typescript-eslint"],
