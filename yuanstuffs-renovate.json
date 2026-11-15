@@ -96,8 +96,8 @@
 			},
 			{
 				"matchPackageNames": ["eslint"],
-				"description": "pin eslint to v9",
-				"allowedVersions": "^9"
+				"description": "pin eslint to v10",
+				"allowedVersions": "^10"
 			}
 		]
 	},
