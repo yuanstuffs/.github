@@ -18,8 +18,8 @@
 		{
 			"matchManagers": ["github-actions"],
 			"matchPackageNames": ["actions/node-versions"],
-			"description": "pin node@26",
-			"allowedVersions": "^26"
+			"description": "pin node@24",
+			"allowedVersions": "^24"
 		}
 	],
 	"npm": {
@@ -61,8 +61,8 @@
 			},
 			{
 				"matchPackageNames": ["@types/node"],
-				"description": "pin @types/node to v26",
-				"allowedVersions": "^26",
+				"description": "pin @types/node to v24",
+				"allowedVersions": "^24",
 				"automerge": true,
 				"platformAutomerge": true
 			},
@@ -70,7 +70,7 @@
 				"matchDepNames": ["node"],
 				"matchDepTypes": ["volta"],
 				"description": "pin volta node version to node@24",
-				"allowedVersions": "^26"
+				"allowedVersions": "^24"
 			}
 		]
 	},
