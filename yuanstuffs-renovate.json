@@ -18,8 +18,8 @@
 		{
 			"matchManagers": ["github-actions"],
 			"matchPackageNames": ["actions/node-versions"],
-			"description": "pin node@24",
-			"allowedVersions": "^24"
+			"description": "pin node@26",
+			"allowedVersions": "^26"
 		}
 	],
 	"npm": {
@@ -46,8 +46,8 @@
 			},
 			{
 				"matchPackageNames": ["typescript"],
-				"description": "only allow renovate bump typescript version to 5.9",
-				"allowedVersions": "<=5.9"
+				"description": "only allow renovate bump typescript version to 6.0.3",
+				"allowedVersions": "<=6.0.3"
 			},
 			{
 				"matchPackageNames": ["eslint"],
@@ -61,8 +61,8 @@
 			},
 			{
 				"matchPackageNames": ["@types/node"],
-				"description": "pin @types/node to v24",
-				"allowedVersions": "^24",
+				"description": "pin @types/node to v26",
+				"allowedVersions": "^26",
 				"automerge": true,
 				"platformAutomerge": true
 			},
@@ -70,7 +70,7 @@
 				"matchDepNames": ["node"],
 				"matchDepTypes": ["volta"],
 				"description": "pin volta node version to node@24",
-				"allowedVersions": "^24"
+				"allowedVersions": "^26"
 			}
 		]
 	},
@@ -91,8 +91,8 @@
 			},
 			{
 				"matchPackageNames": ["typescript"],
-				"description": "only allow renovate bump typescript version to 5.4",
-				"allowedVersions": "<=5.4"
+				"description": "only allow renovate bump typescript version to 6.0.3",
+				"allowedVersions": "<=6.0.3"
 			},
 			{
 				"matchPackageNames": ["eslint"],
