@@ -29,6 +29,9 @@
 - name: mergepls
   color: 'b598a9'
   description: Merge the pull request once all checks has passed
+- name: rebase
+  color: '9c7afb'
+  description: Label to request a rebase from Renovate
 - name: refactor
   color: '74e1c6'
 - name: question
