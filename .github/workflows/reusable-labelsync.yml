@@ -17,7 +17,7 @@ on:
 jobs:
   label-sync:
     name:  Automatic Label Synchronization
-    runs-on: cont
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout Core labels
         uses: actions/checkout@v7
